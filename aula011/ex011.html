@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Aeroporto</title>
+    <style>
+        h1{
+            font: normal 25dp Arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Aeroporto</h1>
+
+    <p>Em qual pais você nasceu ?</p> <input type="text" name="paisN" id="paisN">
+   <input id="btnV" type="button" value="verificar" onclick="verificar()">
+    <div id="nasci"></div>
+
+
+    <script>
+        function verificar(){
+            var pais = document.querySelector('input#paisN')
+            var res = document.querySelector('div#nasci')
+
+            res.innerHTML = `<p>Você nasceu no ${pais}`
+                if(pais != 'brasil'){
+                    res.innerHTML += 'Você é estrangeiro'
+                }
+                res.innerHTML += 'você é Brasileiro'
+                
+        }
+    </script>
+</body>
+</html>
